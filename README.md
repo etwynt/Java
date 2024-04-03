@@ -12,3 +12,7 @@ Read me file uses markdown syntax to edit any text, formulas or codes.
 2. Python AI tool
 3. My own social network 
 😀💋
+
+```java
+how to get backticks on mac air sonoma
+```java
