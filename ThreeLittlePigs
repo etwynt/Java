@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter first piglets name
+        System.out.print("Enter first piglets name: ");
+        String name1 = scanner.next();
+
+        // Prompt the user to enter second piglets name
+        System.out.print("Enter second piglets name: ");
+        String name2 = scanner.next();
+
+        // Prompt the user to enter third piglets name
+        System.out.print("Enter third piglets name: ");
+        String name3 = scanner.next();
+
+        // Prompt the user to enter what materials they used for building their housess
+         System.out.print("Enter first piglets house material: ");
+        String material1 = scanner.next();
+
+         System.out.print("Enter second piglets house material: ");
+        String material2 = scanner.next();
+
+         System.out.print("Enter third piglets house material: ");
+        String material3 = scanner.next();
+
+         System.out.print("Enter what animal comes to destroy the houses: ");
+        String animal = scanner.next();
+
+        System.out.print( "There once lived three piglets " + name1 + ", " + name2 + ", " + name3 + ". They went and built houses for themselves. " + name1 + " used " + material1 + " for their house, " + name2 + " used " + material2 + " . " + name3 + " was the smartest and built their house from " + material3 + ". Then came the big bad " + animal + " who destroyed the houses of " + material1 + " and " + material2 + ". " + name1 + " and " + name2 + " fled to their friend " + name3 + " and were saved. Therefore the best material for houses is " + material3 + "." );
+
+        scanner.close();
+    }
+} 
