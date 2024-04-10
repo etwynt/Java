@@ -85,7 +85,34 @@ public class Main {
 }
 
 
+## NUMBER GUESSING GAME
 
+import java.util.Scanner;
 
+public class Main {
+  public static void main(String[] args) {
 
+Scanner scanner = new Scanner(System.in);
+        int numberToGuess = (int) (Math.random() * 101); // Generates a random number between 0 and 100
+        int guess = -1; // Initialize the guess to a value outside the valid range
+
+        System.out.println("Welcome to the Number Guessing Game!");
+        System.out.println("Try to guess a number between 0 and 100.");
+
+        while (guess != numberToGuess) {
+            System.out.print("Enter your guess: ");
+            guess = scanner.nextInt();
+
+            if (guess < numberToGuess) {
+                System.out.println("The number is bigger than your guess.");
+            } else if (guess > numberToGuess) {
+                System.out.println("The number is smaller than your guess.");
+            } else {
+                System.out.println("Congratulations! You've guessed the correct number: " + numberToGuess);
+            }
+        }
+
+        scanner.close();
+    }
+}
 
