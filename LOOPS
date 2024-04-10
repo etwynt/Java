@@ -92,27 +92,26 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
 
-Scanner scanner = new Scanner(System.in);
-        int numberToGuess = (int) (Math.random() * 101); // Generates a random number between 0 and 100
-        int guess = -1; // Initialize the guess to a value outside the valid range
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Let's play a number guessing game!");
+    System.out.println("I have a whole number between 0 and 100 in mind. Can you guess it?");
+    System.out.println("Write your guess here: ");
 
-        System.out.println("Welcome to the Number Guessing Game!");
-        System.out.println("Try to guess a number between 0 and 100.");
+    int guess = scanner.nextInt();
+    int myNumber = 39;
 
-        while (guess != numberToGuess) {
-            System.out.print("Enter your guess: ");
-            guess = scanner.nextInt();
+    while (guess != myNumber) {
+      if (guess < myNumber) {
+        System.out.println("Higher!");
+      } else {
+        System.out.println("Lower!");
+      }
+      System.out.println("Try again: ");
+      guess = scanner.nextInt();
+      }
+    System.out.println("You got it! Well done!");
 
-            if (guess < numberToGuess) {
-                System.out.println("The number is bigger than your guess.");
-            } else if (guess > numberToGuess) {
-                System.out.println("The number is smaller than your guess.");
-            } else {
-                System.out.println("Congratulations! You've guessed the correct number: " + numberToGuess);
-            }
+            scanner.close();
         }
-
-        scanner.close();
     }
-}
 
