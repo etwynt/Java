@@ -1,0 +1,386 @@
+1. Create a program, where user can provide a title and a small text below the title.
+Title should be wrapped with ====== at top and bottom, based on the title length.
+Example: 
+System asks for title and user provides "WoTech and Java is easy"
+System asks for description and user provides "I have been learning Java for 6 weeks now."
+
+Result: 
+=======================
+WoTech and Java is easy
+=======================
+
+I have been learning Java for 6 weeks now.
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("Enter the title: ");
+    String titleInput = scanner.nextLine();
+    
+    System.out.println("Enter the text: ");
+    String contentInput = scanner.nextLine();
+
+    printTitle(titleInput);
+    printContent(contentInput);
+
+    scanner.close(); 
+    
+  }
+
+  public static void printContent(String content){
+    System.out.println("\n" + content + "\n");
+  }
+
+  public static void printTitle(String title){
+    String heading = generateHeading(title);
+    System.out.println(heading + title + "\n" + heading);
+  }
+    
+  public static String generateHeading(String text){
+    String heading = "";
+    for(int i = 1; i <= text.length(); i++) {
+      heading += "=";
+    }
+    heading += "\n";
+    return heading;
+  }
+
+}
+----------------------------------------------------------------------------
+UZDEVUMS Sum of 2 numbers
+User provides 2 numbers
+Result is a sum of those numbers
+
+Example: 
+User inputs 5
+User inputs 6
+Result: 11
+
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Give me the first number: ");
+    int number1Input = scanner.nextInt();
+
+    System.out.println("Give me the second number: ");
+    int number2Input = scanner.nextInt();
+
+    printSum(number1Input, number2Input);
+
+    scanner.close();
+  }
+
+  public static void printSum(int number1, int number2){
+    int sum = sum(number1, number2);
+    System.out.println("Your sum is: " + sum);
+  }
+
+
+  public static int sum(int number1, int number2) {
+    return number1 + number2;
+  }
+
+}
+--------------------------------------------------------------------------------------------------------------
+//ANOTHER WAY FOR THE TITLE EXERCISE
+
+import java.util.Scanner;
+
+/*
+  Ask user for a title - inputText()
+  Ask user for a description - inputText()
+
+
+  PrintInformation()
+    Figure out the size of title
+    Print out a border of the size of the title -> printBorder()
+    Print out the title
+    Print out a border of the size of the title -> printBorder()
+    Print out the description
+*/
+
+
+public class Main {
+  public static void main(String[] args) {
+
+    //Creating scanner
+    Scanner scanner = new Scanner(System.in);
+
+    //Calling method for getting title
+    System.out.print("Enter a title: ");
+    String title = getText();
+
+    System.out.print("Enter a description: ");
+    String description = getText();
+
+    //Calling method to get printout with lines
+    getPrintout(title, description);
+
+    //Closing scanner
+    scanner.close();
+  }
+
+  // Method to ask user for description
+  public static String getText() {
+    Scanner scanner = new Scanner(System.in);
+
+    //Read user input
+    String text = scanner.nextLine();
+
+    //Return user input
+    return text;
+  }
+
+    // Method to display the result with the title wrapped in = characters + description
+/*    
+
+    Figure out the size of title
+    Print out a border of the size of the title -> printBorder()
+    Print out the title
+    Print out a border of the size of the title -> printBorder()
+    Print out the description*/
+  public static void getPrintout(String title, String description) {
+
+    // Calc length
+    int length = title.length();
+    // Create top border
+    printBorder(length);
+    // Display the title
+    System.out.print(title);
+
+    System.out.println("");
+    // Create bottom border
+    printBorder(length);
+
+    // Display the description
+    System.out.println("");
+    System.out.println(description);
+
+  }
+
+  public static void printBorder(int length){
+    for (int i = 0; i < (length); i++) {
+      System.out.print("=");
+    }
+    System.out.println("");
+  }
+}
+
+------------------------------------------------------------------------------------------------
+public class Main {
+  public static void main(String[] args) {
+    int number = 51;
+
+    checkNumber(number);
+
+    int number2 = 49;
+    
+    if(number2 > 50){
+      System.out.println("Number is greater than 50");
+    }else if(number2 < 50){
+      System.out.println("Number is less than 50");
+    }else{
+      System.out.println("Number is equal to 50");  
+    }
+    /* We get the number
+    We check whether or not it is bigger than 50
+    We check whether or not it is smaller than 50
+    We assume it is equal to 50 if all of the upper conditions are false
+    */
+  }
+
+  public static void checkNumber(int number){
+    if(number > 50){
+      System.out.println("Number is greater than 50");
+    }else if(number < 50){
+      System.out.println("Number is less than 50");
+    }else{
+      System.out.println("Number is equal to 50");  
+    }
+  }
+}
+
+------------------------------------------------------------------------------------------------
+//void is just for action 
+  //Int if is returning a number
+  //String is returning a text
+  //Double is returning a decimal
+  //Boolean is returning a true or false
+  //Char is returning a single character
+  //Float is returning a decimal with less precision
+  //Long is returning a number with more precision
+  //etc......
+------------------------------------------------------------------------------------------------
+
+public class Main {
+  public static void main(String[] args) {
+    int number = 51;
+
+    String result = checkNumber(number);
+    System.out.println(result);
+    
+    int number2 = 49;
+    
+    String result2 = checkNumber(number2);
+    System.out.println(result2);
+    /* We get the number
+    We check whether or not it is bigger than 50
+    We check whether or not it is smaller than 50
+    We assume it is equal to 50 if all of the upper conditions are false
+    */
+  }
+  //Void is just for action
+  //int it is returning a number
+  //string is returning a text
+  //double is returning a double 
+  //...
+  public static String checkNumber(int number){
+    if(number > 50){
+      return "Number is greater than 50";
+    }else if(number < 50){
+      return "Number is less than 50";
+    }else{
+      return "Number is equal to 50";  
+    }
+  }
+}
+
+------------------------------------------------------------------------------------------------
+CAN I BUY JEANS
+
+public class Main {
+  public static void main(String[] args) {
+    int money = 50;
+
+    String result = buyJeans(money);
+    
+    System.out.println(result);
+
+  }
+
+  public static String buyJeans(int money){
+    int price = 30;
+    if(money > 30) // 29.99
+    {
+      return "Person can afford Jeans";
+    }else{
+      return "Person cannot afford Jeans";
+    }
+  }
+}
+------------------------------------------------------------------------------------------------
+
+RETURN TYPE EXAMPLE 
+
+// 7, 12, 18 
+// Needs to sum them all together
+
+
+public class Main {
+  public static void main(String[] args) {
+    int number1 = 7;
+    int number2 = 12;
+
+    int number3 = 18;
+
+    int result = sum(number1, number2); // 7 + 12 = 19
+
+    int finalResult = sum(result, number3); // 19 + 18 = 37
+
+    System.out.println(finalResult);
+  }
+
+  public static int sum(int a, int b){
+    //Function start here
+    return a + b;
+    //Function ends here
+  }
+}
+------------------------------------------------------------------------------------------------
+Easy:
+1. Create a function that returns smallest number of 2 numbers.
+
+For example:
+User provides 5
+User provides 7
+
+Function returns 5
+Main function prints out:
+5 is the smallest number
+
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 7;
+
+        int smallest = findSmallest(num1, num2);
+
+        System.out.println(smallest + " is the smallest number.");
+    }
+
+    public static int findSmallest(int num1, int num2) {
+        return Math.min(num1, num2);
+    }
+}
+
+
+2. Create a function that returns a multiplication of 3 different numbers
+For example: 
+User provides 5
+User provides 7
+User provides 3
+
+Function returns 105
+Main function prints out 105
+
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 7;
+        int num3 = 3;
+
+        int multiplication = multiplyThreeNumbers(num1, num2, num3);
+
+        System.out.println(multiplication);
+    }
+
+    public static int multiplyThreeNumbers(int num1, int num2, int num3) {
+        return num1 * num2 * num3;
+    }
+}
+
+3. Create a function that returns a combination of first name and last name
+User provides "Oskars"
+User provides "Klaumanis"
+
+Function receives both of the names and returns "Oskars Klaumanis"
+Main function prints out the result
+
+public class Main {
+    public static void main(String[] args) {
+        String firstName = "Oskars";
+        String lastName = "Klaumanis";
+
+        String fullName = combineNames(firstName, lastName);
+
+        System.out.println(fullName);
+    }
+
+    public static String combineNames(String firstName, String lastName) {
+        return firstName + " " + lastName;
+    }
+}
+
+
+
+
+
+
+
