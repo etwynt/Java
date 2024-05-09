@@ -1,0 +1,80 @@
+2D arrays
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = new int[5][5];
+
+        for (int i = 0; i < array.length; i++) {
+            int[] row = array[i];
+            for (int j = 0; j < row.length; j++) {
+                row[j] = 1;
+            }
+        }
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                System.out.print(array[i][j] + "|");
+            }
+            System.out.println();
+            System.out.println("----------");
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------
+MULTIPLICATION TABLE 
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = new int[10][10];
+
+        for (int i = 0; i < array.length; i++) {
+            int[] row = array[i];
+            for (int j = 0; j < row.length; j++) {
+                row[j] = i*j;
+            }
+        }
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                if(array[i][j] < 10){
+                    System.out.print(array[i][j] + "  ");
+                }
+                else{
+                    System.out.print(array[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------
+EASY GROUPWORK - FILL THE 5X5 ARRAY WITH NUMBERS FROM 1 TO 25
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = new int[5][5];
+        int count = 1;
+
+        // Fill the array with numbers from 1 to 25
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = count++;
+            }
+        }
+
+        // Printing the array with fixed width for numbers
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.printf("%2d ", array[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
