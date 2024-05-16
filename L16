@@ -1,0 +1,58 @@
+**COPIES OF PRIMITIVE DATA TYPES**
+
+public class Main {
+    public static void main(String[] args) {
+        // Easy: Create a copy of all primitive types (STRINGS INCLUDED)
+        int originalInt = 69;
+        int copiedInt = originalInt;
+        System.out.println("Original number (int): " + originalInt);
+        System.out.println("Copied number (int): " + copiedInt);
+
+        double originalDouble = 7.7;
+        double copiedDouble = originalDouble;
+        System.out.println("Original double: " + originalDouble);
+        System.out.println("Copied double: " + copiedDouble);
+
+        float originalFloat = 3.14f; 
+        float copiedFloat = originalFloat;
+        System.out.println("Original float: " + originalFloat);
+        System.out.println("Copied float: " + copiedFloat);
+
+        boolean isCat = true;
+        boolean copiedBoolean = isCat;
+        System.out.println("Original boolean: " + isCat);
+        System.out.println("Copied boolean: " + copiedBoolean);
+
+        char originalChar = 'X';
+        char copiedChar = originalChar;
+        System.out.println("Original char: " + originalChar);
+        System.out.println("Copied char: " + copiedChar);
+
+        String originalString = "I love learning with WoTech";
+        String copiedString = originalString;
+        System.out.println("Original String: " + originalString);
+        System.out.println("Copied String: " + copiedString);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
