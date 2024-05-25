@@ -1,0 +1,205 @@
+**In Java, streams are a way to process sequences of elements in a functional style. 
+They make it easier to perform operations like filtering, mapping, and reducing on collections of data.**
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Table");        
+        shopsItems.add("Chair");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");        
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        var filteredShopsItems = new ArrayList<String>();
+        for(var item: shopsItems){
+            if(item.contains("table")){
+                filteredShopsItems.add(item);
+            }
+        }
+        System.out.println(filteredShopsItems);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        var filteredShopsItems = shopsItems
+                .stream()
+                .skip(3)
+                .limit(2)
+                .collect(Collectors.toList());
+
+        System.out.println(filteredShopsItems);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        shopsItems
+                .stream()
+                .skip(3)
+                .limit(2)
+                .forEach(x -> System.out.println("TEST " + x));
+
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        shopsItems
+            .stream()
+            .skip(3)
+            .limit(2)
+            .forEach(x -> System.out.println("TEST " + x));
+
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        shopsItems
+            .stream()
+            .filter(x -> x.contains("table"))
+            .forEach(x -> System.out.println("TEST " + x));
+
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+        
+        shopsItems
+            .stream()
+            //.filter(x -> x.contains("table"))
+            .forEach(x -> Print(x));
+
+    }
+
+    public static void Print(String text) {
+        System.out.println();
+        System.out.println(text);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+HOMEWORK 
+Easy: Create an integer ArrayList, skip the first 5 numbers. And then with the rest of them, print them out.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Step 1: Create an ArrayList and add some integers to it
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) { // Adding numbers from 1 to 10
+            numbers.add(i);
+        }
+
+        // Step 2: Skip the first 5 numbers
+        for (int i = 5; i < numbers.size(); i++) { // Start from index 5
+            // Step 3: Print the rest of the numbers
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+
+
+
+
