@@ -1,0 +1,97 @@
+## I dont even know : ##
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Person person = new Person();
+    person.name = "Lelde";
+    person.surname = "Brosova";
+    
+    Person person2 = new Person();
+    person2.name = "Elchin";
+    person2.surname = "Datorium";
+
+    System.out.println(person.name);
+    System.out.println(person.surname);
+
+  }
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class Person {
+    public String name;
+    public String surname;
+
+  // new Person("Oskars", "Klaumanis");
+  //This is a constructor
+  // Constructor always launches when you create a new object -> new Person(name, surname);
+  // You can provide values to constructor
+  public Person(String inputName, String inputSurname){
+    name = inputName;
+    surname = inputSurname;
+  }
+
+  public Person(){
+
+  }
+}
+
+
+//DTO - data transfer object
+
+//Main.java -> new Person();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+## THE NEW EXAMPLE ABOUT BOOKS FROOM BOOK.JAVA ##
+
+public class Book{
+    public String title;
+    public String author;
+    public int pageCount;
+
+    public Book(String title, String author, int pageCount){
+    this.title = title;
+    this.author = author;
+    this.pageCount = pageCount;
+    }
+    public Book(){
+    this.title = "Unknown";
+    this.author = "Unknown";
+    }
+}
+
+## FROM THE MAIN CLASS MAIN.JAVA ##
+
+public class Main {
+    public static void main(String[] args) {
+        var book = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+
+        System.out.println(book.title);
+        System.out.println(book.author);
+        System.out.println(book.pageCount);
+
+        var book2 = new Book();
+        System.out.println(book2.title);
+        System.out.println(book2.author);
+        System.out.println(book2.pageCount);
+    }
+}
+
+//A book, that has it's author, and book title to it.
+// We create a book, and then we print out the values of the book in a fancy way.
+
+// Title
+// ----------------------------
+// Author
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
