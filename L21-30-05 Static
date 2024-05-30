@@ -1,0 +1,162 @@
+## Main.java
+
+public class Main {
+  public static void main(String[] args) {
+    Student.studentCount = 10;  //Global variable which everyone can use 
+    
+   Student student = new Student();
+    student.name = "John";
+    Student student2 = new Student();
+    System.out.println(student2.name);
+    System.out.println(student.studentCount);
+    System.out.println(student2.studentCount);
+    System.out.println(Student.studentCount);
+    
+  }
+
+}
+
+## Student.java
+
+public class Student{
+  public static int studentCount;
+
+  public String name;
+  public int age;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Main.java
+
+public class Main {
+  public static void main(String[] args) {
+    
+    var square1 = new Square(3);
+    var square1Perimeter = square1.getPerimeter();
+    System.out.println(square1Perimeter);
+
+    var square2 = new Square(4);
+    var square2Perimeter = square2.getPerimeter();
+    System.out.println(square2Perimeter);
+
+    var square3 = new Square(100);
+    var square3Perimeter = square3.getPerimeter();
+    System.out.println(square3Perimeter);
+
+    var square4 = new Square(1);
+    var square4Perimeter = square4.getPerimeter();
+    System.out.println(square4Perimeter);
+
+  }
+
+}
+
+
+Square.java
+
+public class Square{
+  public int sideLength;//sideLength = 7
+  // new square(7); 
+  public Square(int sideLength){
+    this.sideLength = sideLength;
+  }
+
+public int getPerimeter(){
+  return sideLength * 4;
+}
+  
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Main.java
+
+public class Main {
+  public static void main(String[] args) {
+    
+    var square1 = new Square(3);
+    var square1Perimeter = square1.getPerimeter();
+    var square1FieldSize = square1.getField();
+    
+    System.out.println(square1Perimeter);
+    System.out.println(square1FieldSize);
+
+
+  }
+
+}
+
+Square.java
+
+public class Square{
+  public int sideLength;//sideLength = 7
+  // new square(7); 
+  public Square(int sideLength){
+    this.sideLength = sideLength;
+  }
+
+public int getPerimeter(){
+  return sideLength * 4;
+}
+// var square1 = new Square(10);
+// var fieldSize = square1.getField();
+  public int getField(){
+    return sideLength * sideLength;
+  }
+  
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+## FORK STABBING EXAMPLE 
+
+Main.java
+
+public class Main {
+    public static void main(String[] args) {
+        var fork = new Fork(4, "Silver");
+
+        System.out.println("Fork is made out of " + fork.material);
+
+        System.out.println("Fork has " + fork.spikeCount + " spikes in total.");
+
+        System.out.println("And the sharpness is " + fork.sharpness);
+
+for(int i = 0; i < 100; i++){
+  fork.stab();
+  
+}
+      System.out.println("The sharpness after 100 stabs is " + fork.sharpness);
+    }
+}
+
+
+Fork.java
+
+//Fork has 3 or 4  spikes
+//Fork has a material (silver, or plastic, wood)
+//Fork has sharpness in the spikes. 0
+//A fork can stab and whenever a fork stabs, it gets more dull
+//Sharpness is gonna decrease by 0.1
+
+public class Fork{
+  public int spikeCount;
+  public String material;
+  public int sharpness = 1000;
+
+  //new Fork(3, "wood")
+  public Fork(int spikeCount, String material){
+    this.spikeCount = spikeCount;
+    this.material = material;
+  }
+
+  public void stab(){
+    sharpness = sharpness - 1;
+  }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
