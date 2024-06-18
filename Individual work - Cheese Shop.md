@@ -131,7 +131,7 @@ public class Cheese {
 }
 ```
 
-***CHEESESERVICE**
+**CHEESESERVICE**
 
 ```java
 
