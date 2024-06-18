@@ -72,7 +72,8 @@
 ```
 ** CheeseShop **
 
-```
+```java
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,7 +106,8 @@ public class CheeseShop {
 
 ** Cheese **
 
-```
+```java
+
 public class Cheese {
     private String name;
     private double price;
@@ -132,7 +134,8 @@ public class Cheese {
 
 *** CheeseService **
 
-```
+```java
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -155,7 +158,8 @@ public class CheeseService {
 
 ** Customer **
 
-```
+```java 
+
 import java.util.ArrayList;
 import java.util.List;
 
