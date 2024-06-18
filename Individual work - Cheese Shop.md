@@ -69,7 +69,7 @@
                   }
               }
 ```
-** CheeseShop **
+**CHEESESHOP**
 
 ```java
 
@@ -103,7 +103,7 @@ public class CheeseShop {
 }
 ```
 
-** Cheese **
+**CHEESE**
 
 ```java
 
@@ -131,7 +131,7 @@ public class Cheese {
 }
 ```
 
-*** CheeseService **
+***CHEESESERVICE**
 
 ```java
 
@@ -155,7 +155,7 @@ public class CheeseService {
 }
 ```
 
-** Customer **
+**CUSTOMER**
 
 ```java 
 
