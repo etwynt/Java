@@ -1,13 +1,12 @@
-Read me file uses markdown syntax to edit any text, formulas or codes.
+This was my very first tim eusing Github for my projects and lesson materials.
 
 # Welcome to my repository
 
-## My skills (second level heading)
+## My skills 
 - Java
 -  Python
 -   Github
 
-## My major projects (second level heading)
-1. Java online banking app
+## My major projects 
 2. Python AI tool
 
