@@ -4,9 +4,6 @@ This was my very first tim eusing Github for my projects and lesson materials.
 
 ## My skills 
 - Java
--  Python
--   Github
-
-## My major projects 
-2. Python AI tool
+- Python
+- Git/Github
 
