@@ -10,9 +10,4 @@ Read me file uses markdown syntax to edit any text, formulas or codes.
 ## My major projects (second level heading)
 1. Java online banking app
 2. Python AI tool
-3. My own social network 
-😀💋
 
-```java
-how to get backticks on mac air sonoma
-```java
