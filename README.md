@@ -1,4 +1,4 @@
-This was my very first tim eusing Github for my projects and lesson materials.
+This was my very first time using Github for my projects and lesson materials.
 
 # Welcome to my repository
 
