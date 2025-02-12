@@ -224,3 +224,8 @@ EXAMPLE RESPONSE:
 
 - To delete a review, make DELETE request to /reviews/{id}
     - {id} - review id
+ 
+
+## Payment
+
+- 
