@@ -86,7 +86,7 @@ EXAMPLE RESPONSE:
 ```
 
 - To get a specific review based on ID make GET a request to /reviews/{id}
-- {id} - review id
+    - {id} - review id
   
 
 EXAMPLE RESPONSE: 
