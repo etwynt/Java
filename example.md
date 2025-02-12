@@ -99,6 +99,4 @@ EXAMPLE RESPONSE:
 }
 ```
 
-- To delete a specific review based on ID make a request to /reviews
-
-Enter the ID - and there is no response?
+- To delete a review, make DELETE request to /reviews/{id}
