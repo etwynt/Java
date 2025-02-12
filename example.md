@@ -54,7 +54,7 @@ This setup ensures a **scalable, secure, and efficient** online marketplace with
 
 To submit a review, make a POST request to http://localhost:8080/reviews
 
-To get all reviews make a GET request/reviews
+- To get all reviews make a GET request/reviews
 
 EXAMPLE RESPONSE: 
 
@@ -66,7 +66,7 @@ EXAMPLE RESPONSE:
     "rating": 1073741824
   }
 ```
-To create a review:
+- To create a review:
 
 EXAMPLE REQUEST:
 ```java
@@ -87,7 +87,7 @@ EXAMPLE RESPONSE:
 }
 ```
 
-To get a specific review based on ID:
+- To get a specific review based on ID:
 
 Enter the ID
 
@@ -101,6 +101,6 @@ EXAMPLE RESPONSE:
 }
 ```
 
-To delete a specific review based on ID:
+- To delete a specific review based on ID:
 
 Enter the ID - and there is no response?
