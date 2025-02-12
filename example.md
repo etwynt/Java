@@ -52,7 +52,7 @@ This setup ensures a **scalable, secure, and efficient** online marketplace with
 
 ## Reviews
 
-- To get all reviews make a GET request/reviews
+- To get all reviews make a GET request to /reviews
 
 EXAMPLE RESPONSE: 
 
@@ -64,7 +64,7 @@ EXAMPLE RESPONSE:
     "rating": 1073741824
   }
 ```
-- To create a review:
+- To create a review, make a POST request to /reviews
 
 EXAMPLE REQUEST:
 ```java
@@ -85,7 +85,7 @@ EXAMPLE RESPONSE:
 }
 ```
 
-- To get a specific review based on ID:
+- To get a specific review based on ID make a request to /reviews
 
 Enter the ID
 
@@ -99,6 +99,6 @@ EXAMPLE RESPONSE:
 }
 ```
 
-- To delete a specific review based on ID:
+- To delete a specific review based on ID make a request to /reviews
 
 Enter the ID - and there is no response?
