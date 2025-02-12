@@ -49,6 +49,41 @@ We recognised the need for an upgrade to provide a better, more modern, and visu
 This setup ensures a **scalable, secure, and efficient** online marketplace with a seamless user experience.
 
 ---
+## User
+
+- To retrieve user info by ID, make GET request to /users/{id}
+    - {id} - user id
+- To update existing user's information, make PUT request to /users/{id}
+
+EXAMPLE VALUE:
+```java
+{
+  "id": 9007199254740991,
+  "name": "string",
+  "surname": "string",
+  "email": "string",
+  "password": "string",
+  "accountVerified": true,
+  "verificationToken": "string",
+  "verificationTokenExpiry": "2025-02-12T14:39:41.793Z",
+  "roles": [
+    {
+      "id": 1073741824,
+      "name": "ROLE_USER"
+    }
+  ],
+  "cart": {
+    "id": 9007199254740991,
+    "listings": [
+      "string"
+    ]
+  }
+}
+```
+- To delete a user, make DELETE request to /users/{id}
+  - {id} - user id
+
+
 
 ## Reviews
 
