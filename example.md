@@ -55,7 +55,7 @@ This setup ensures a **scalable, secure, and efficient** online marketplace with
     - {id} - user id
 - To update existing user's information, make PUT request to /users/{id}
 
-EXAMPLE VALUE:
+EXAMPLE REQUEST:
 ```java
 {
   "id": 9007199254740991,
@@ -80,10 +80,98 @@ EXAMPLE VALUE:
   }
 }
 ```
-- To delete a user, make DELETE request to /users/{id}
+- To delete a user, make a DELETE request to /users/{id}
   - {id} - user id
 
+## Category
 
+- To retrieve information about a specific category by it's ID, make a GET request to /api/categories/{id}
+    - categories/{id}
+
+EXAMPLE RESPONSE: 
+```java
+{
+  "id": 9007199254740991,
+  "type": "FAMILY",
+  "name": "string",
+  "description": "string"
+}
+```
+
+- To update information for a specific category by it's ID, make a PUT request to /api/categories/{id}
+
+EXAMPLE REQUEST:
+```java
+{
+  "id": 9007199254740991,
+  "type": "FAMILY",
+  "name": "string",
+  "description": "string"
+}
+```
+
+EXAMPLE RESPONSE: 
+```java
+{
+  "id": 9007199254740991,
+  "type": "FAMILY",
+  "name": "string",
+  "description": "string"
+}
+```
+
+- To delete a specific category, make a DELETE request to /api/categories/{id}
+    - categories/{id}
+ 
+- To retrieve information about all categories, make a GET request to /api/categories
+    - /categories
+
+EXAMPLE RESPONSE: 
+```java
+[
+  {
+    "id": 9007199254740991,
+    "type": "FAMILY",
+    "name": "string",
+    "description": "string"
+  }
+]
+```
+
+- To add a new category, make a POST request to /api/categories
+
+EXAMPLE REQUEST: 
+```java
+{
+  "id": 9007199254740991,
+  "type": "FAMILY",
+  "name": "string",
+  "description": "string"
+}
+```
+EXAMPLE RESPONSE: 
+```java
+{
+  "id": 9007199254740991,
+  "type": "FAMILY",
+  "name": "string",
+  "description": "string"
+}
+```
+- To retrieve information about categories by type, make a GET request to /api/categories/type
+    - /categories/type
+ 
+EXAMPLE RESPONSE:
+```java
+[
+  {
+    "id": 9007199254740991,
+    "type": "FAMILY",
+    "name": "string",
+    "description": "string"
+  }
+]
+```
 
 ## Reviews
 
