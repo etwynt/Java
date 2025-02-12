@@ -52,8 +52,6 @@ This setup ensures a **scalable, secure, and efficient** online marketplace with
 
 ## Reviews
 
-To submit a review, make a POST request to http://localhost:8080/reviews
-
 - To get all reviews make a GET request/reviews
 
 EXAMPLE RESPONSE: 
